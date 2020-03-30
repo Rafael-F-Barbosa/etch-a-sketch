@@ -3,7 +3,8 @@
 body{
     text-align: center;
     background-color: #111111;
-    
+    display: grid;
+    justify-content: center;
 }
 h1{
     color: white;
@@ -23,6 +24,10 @@ button{
     outline: none;
 
     font-weight: bold;
+
+    justify-self: center;
+
+    align-self: center;
     
 
 }
@@ -30,15 +35,35 @@ button:hover{
     transform: scale(1.06);
 }
 
+label{
+    color: white;
+}
+input{
+    margin-bottom: 30px;
+}
+
+#container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    width: 500px;
+    height: 500px;
+}
+
 
 .lines{
-    height: 40px;
+    
     display: flex;
-    justify-content: center;
+    flex-grow: 1;
+    
+    justify-content: space-between;
 }
 
 .element{
-    width: 40px;
+
+    flex-grow: 1;
+    
 
     background-color: #AAAAAA;
     

@@ -5,13 +5,13 @@ const container = document.querySelector("#container")
 
 // Creation of the boxes
 let i, j;
-for(i=0; i <16; i++)
+for(i=0; i <4; i++)
 {
     const newLine = document.createElement('div');
     newLine.classList.add('lines');
     container.appendChild(newLine);
 
-    for (let j = 0; j < 16; j++) {
+    for (let j = 0; j < 4; j++) {
         const element = document.createElement('div');
         element.classList.add('element');
         newLine.appendChild(element);
