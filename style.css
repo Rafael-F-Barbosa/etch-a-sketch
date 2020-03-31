@@ -60,7 +60,7 @@ input{
     justify-content: space-between;
 }
 
-.element{
+#element{
 
     flex-grow: 1;
     
@@ -73,9 +73,13 @@ input{
     border-width: 1px;
     
     
-    margin: 2px
+    margin: 1px
 }
 
 .makeblue{
     background-color: cadetblue;
+}
+
+.createButton{
+    background-color: pink;
 }
