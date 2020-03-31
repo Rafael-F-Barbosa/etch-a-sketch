@@ -1,6 +1,13 @@
+// Events Listeners
 const buttonCreate = document.querySelector(".createButton");
 buttonCreate.addEventListener('click', changeNumber);
 
+const numberPassed = document.querySelector("#numberBoxes");
+numberPassed.addEventListener('keypress', function (e) {
+    if (e.key == 'Enter') {
+        changeNumber();
+    }
+});
 
 const button = document.querySelector('button');
 button.addEventListener('click', clear);
@@ -10,6 +17,11 @@ changeNumber();
 // apply the random color
 function putColor() {
     this.style.backgroundColor = randomColor()
+}
+
+function enterPressed() {
+    console.log(e.key);
+
 }
 
 // generates a random color
@@ -31,7 +43,7 @@ function boxCreation(lin, col) {
     const container = document.querySelector('#container')
     for (i = 0; i < lin; i++) {
         let i, j;
-        
+
         const newLine = document.createElement('div');
         newLine.classList.add('lines');
         container.appendChild(newLine);
@@ -45,24 +57,21 @@ function boxCreation(lin, col) {
     }
 }
 
-function eraseBoxes(){
+function eraseBoxes() {
     const container = document.querySelector('#container')
-    while(container.firstChild)
-    {
-        console.log(container);
+    while (container.firstChild) {
         container.removeChild(container.firstChild)
-    }  
+    }
 }
 
 // Changing the number of boxes
 function changeNumber() {
-    
+    console.log('oi');
+
     eraseBoxes()
 
     const numberOfBoxes = document.querySelector("#numberBoxes")
     boxCreation(numberOfBoxes.value, numberOfBoxes.value)
-
-    
 
     // Create the event listener for all of the boxes
     let boxes = document.querySelectorAll('#element');
